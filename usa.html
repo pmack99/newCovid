@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='new.css'>
 
-    <title>COVID-19 Data</title>
+    <title>USA COVID-19 Data</title>
   </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,85 +34,22 @@
               </nav>
 
              
-<div class="jumbotron jumbotron-fluid">
-    <h1>World Wide COVID-19 Data</h1>
-    <div class="card-deck mt-5">
-                    
-
-            <div class="card" style="width: 15rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Total Cases</h5>
-                      <p id="total_cases"></p>
-                    </div>
-                  </div>
-    
-            <div class="card" style="width: 15rem;">
-                  <div class="card-body">
-                        <h5 class="card-title">Total Death</h5>
-                        <p id="total_death"> </p>
-                      </div>
-                    </div>
-    
-            <div class="card" style="width: 15rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Recovery</h5>
-                        <p id="total_recovered"> </p>           
-                    </div>
-            </div>
-    
-            <div class="card" style="width: 15rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">New cases</h5>
-                        <p id="new_case"> </p>           
-                    </div>
-            </div>
-    
-            <div class="card" style="width: 15rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">New deaths</h5>
-                        <p id="new_death"> </p>           
-                    </div>
-            </div>
-
-            <div class="card" style="width: 15rem;">
-              <div class="card-body">
-                  <h5 class="card-title">Date of data</h5>
-                  <p id="statistic_taken_at"> </p>           
-              </div>
-      </div>
-
-
-
-            
-        
-        </div>
-    </div>
-</div>
 
 <div class="jumbotron jumbotron-fluid">
 
-  
-    <table class="table">
-
-        <table id="countries_stat">
+        <table id="covid19Stats">
                 <tr>
-                    <th>Country</th>
-                    <th>Cases</th>
-                    <th>New Cases</th>
+                    <th>States</th>
+                    <th>Confirmed</th>
                     <th>Deaths</th>
-                    <th>New Deaths</th>
-                    <th>Critical</th>
                     <th>Recovered</th>
-                    <th>Cases per Million</th>
-        
+                    <th>LastUpdate</th>
                 </tr>
             </table>
-         
-        </div>
 
 </div>
 
-    <script src='main.js'></script>
+    <script src='states.js'></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
