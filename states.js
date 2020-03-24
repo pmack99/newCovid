@@ -21,19 +21,19 @@ let covid19Stats = Array.from(data.data.covid19Stats)
         console.log(covid19Stats[i]);
         //we will start by inserting the new rows inside our table
         let row = table.insertRow(i+1);
-        let city = row.insertCell(0);
-        let province = row.insertCell(1);
-        let confirmed= row.insertCell(2);
-        let recovered = row.insertCell(3);
-        let deaths = row.insertCell(4);
+        let keyId = row.insertCell(0);
+        let confirmed= row.insertCell(1);
+        let recovered = row.insertCell(2);
+        let deaths = row.insertCell(3);
+        let lastUpdate = row.insertCell(3);
         
         
-        city.innerHTML = covid19Stats[i].city;
-        province.innerHTML = covid19Stats[i].province;
+        
+        keyId.innerHTML = covid19Stats[i].keyId;
         confirmed.innerHTML = covid19Stats[i].confirmed;
         recovered.innerHTML = covid19Stats[i].recovered;
         deaths.innerHTML = covid19Stats[i].deaths;
-        
+        lastUpdate.innerHTML = covid19Stats[i].lastUpdate;
         
 
     }
