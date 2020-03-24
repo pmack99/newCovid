@@ -1,4 +1,5 @@
 
+let table = document.getElementById('usa')
 
 //Fetching The Data
 fetch("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=US", {
