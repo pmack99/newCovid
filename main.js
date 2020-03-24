@@ -7,6 +7,7 @@ let total_cases = document.getElementById("total_cases");
 let statistic_taken_at = document.getElementById("statistic_taken_at");
 let table = document.getElementById('countries_stat')
 
+
 // Fetching the Data from the server
 
 //Fetching the World Data
