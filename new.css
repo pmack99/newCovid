@@ -7,31 +7,38 @@
 }
 
 .jumbotron{
-    padding:50px 50px 50px 50px;
+    padding:40px 40px 40px 40px;
     margin-bottom:10px;
-    }
+    font-family: 'Oswald', sans-serif;
+    background-image: url(coronaBlack.png);
+    background-size: cover;
+  
+  }
+
+    
     
 
 body{
-    background-color: gray;
+    background-color: black;
+    color: white;
 }
 
 #countries_stat td, #countries_stat th {
     border: 5px solid #ddd;
-    padding: 20px;
+    padding: 10px;
     
   }
   
   #countries_stats tr:nth-child(even){background-color: #f2f2f2;}
   
-  #countries_stat tr:hover {background-color: #ddd;}
+  #countries_stat tr:hover {background-color: red;}
   
   #countries_stat th {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     text-align: left;
-    background-color: rgb(126, 123, 126);
-    color: white;
+    background-color:black;
+    color: red;
     text-align: center;
     height: 50px;
   }
@@ -47,4 +54,41 @@ body{
     width: 100%;
     overflow-y: auto;
   }
+
+
+  .card-deck {
+    color: black;
+    
+  }
+
+  .a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    background-image: url(coronaBlack.png);
+
+  }
+
+  .t {
+    overflow-x:auto;
+
+  }
+
+
+  hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-style: inset;
+    border-width: 1px;
+  }
+  
+  .c {
+    background: none;
+    border-radius: 1rem;
+    border-color: tomato;
+
+  }
+
   

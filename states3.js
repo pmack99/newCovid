@@ -1,19 +1,19 @@
-const axios = require("axios");
+var unirest = require("unirest");
 
-axios({
-    "method":"GET",
-    "url":"https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats",
-    "headers":{
-    "content-type":"application/octet-stream",
-    "x-rapidapi-host":"covid-19-coronavirus-statistics.p.rapidapi.com",
-    "x-rapidapi-key":"ZeHU2dLvjAmshuqcmPA4HBoNcnGjp1s2JLejsnV9UPv93eRbuo"
-    },"params":{
-    "country":"USA"
-    }
-    })
-    .then((response)=>{
-      console.log(response)
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
+var req = unirest("GET", "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats");
+
+req.query({
+	"country": "USA"
+});
+
+req.headers({
+	"x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
+	"x-rapidapi-key": "ZeHU2dLvjAmshuqcmPA4HBoNcnGjp1s2JLejsnV9UPv93eRbuo"
+});
+
+
+req.end(function (res) {
+	if (res.error) throw new Error(res.error);
+
+	console.log(res.body);
+});
