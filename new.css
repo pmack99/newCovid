@@ -7,7 +7,7 @@
 }
 
 .jumbotron{
-    padding:40px 40px 40px 40px;
+    padding:50px 40px 50px 40px;
     margin-bottom:10px;
     font-family: 'Oswald', sans-serif;
     background-image: url(coronaBlack.png);
@@ -15,21 +15,18 @@
   
   }
 
-    
-    
 
 body{
     background-color: black;
     color: white;
 }
 
-#countries_stat td, #countries_stat th {
-    border: 5px solid #ddd;
+#countries_stat td, #countries_stat th, #usa td, #usa th {
+    border: 2px solid #ddd;
     padding: 10px;
     
   }
   
-  #countries_stats tr:nth-child(even){background-color: #f2f2f2;}
   
   #countries_stat tr:hover {background-color: red;}
   
@@ -40,7 +37,7 @@ body{
     background-color:black;
     color: red;
     text-align: center;
-    height: 50px;
+    height: 40px;
   }
 
 
@@ -49,6 +46,28 @@ body{
     height: 20px;
 
   }
+
+  #usa tr{
+
+    height: 20px;
+
+  }
+
+ 
+  
+  #usa tr:hover {background-color: red;}
+  
+  #usa th {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color:black;
+    color: red;
+    text-align: center;
+    height: 40px;
+  }
+
+
 
   table {
     width: 100%;
@@ -65,11 +84,6 @@ body{
     font-family: 'Oswald', sans-serif;
     font-size: 5rem;
     background-image: url(coronaBlack.png);
-
-  }
-
-  .t {
-    overflow-x:auto;
 
   }
 
