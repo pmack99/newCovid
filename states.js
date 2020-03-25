@@ -25,7 +25,7 @@ let covid19Stats = Array.from(data.data.covid19Stats)
         let confirmed= row.insertCell(1);
         let recovered = row.insertCell(2);
         let deaths = row.insertCell(3);
-        let lastUpdate = row.insertCell(3);
+        let lastUpdate = row.insertCell(4);
         
         
         

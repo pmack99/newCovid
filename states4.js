@@ -1,3 +1,7 @@
+let table = document.getElementById('usa')
+
+
+
 fetch("https://covidtracking.com/api/states/daily", {
 	"method": "GET",
 
@@ -17,16 +21,16 @@ fetch("https://covidtracking.com/api/states/daily", {
         let state = row.insertCell(0);
         let positive = row.insertCell(1);
         let negative = row.insertCell(2);
-        let death = row.insertCell(3);
-        let hospitilized = row.insertCell(4);
+        let hospitalized = row.insertCell(3);
+        let death = row.insertCell(4);
         let total = row.insertCell(5);
         let dateChecked = row.insertCell(6);
 
         state.innerHTML = data[i].state;
         positive.innerHTML = data[i].positive;
         negative.innerHTML = data[i].negative;
+        hospitalized.innerHTML = data[i].hospitalized;
         death.innerHTML = data[i].death;
-        hospitilized.innerHTML = data[i].hospitilized;
         total.innerHTML = data[i].total;
         dateChecked.innerHTML = data[i].dateChecked;
       
