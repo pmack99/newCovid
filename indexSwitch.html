@@ -38,10 +38,6 @@
                       <a class="nav-link" href="florida.html">Florida</a>
                     </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link" href="ny.html">New York</a>
-                    </li>
-
 
                     <li class="nav-item">
                       <a class="nav-link" href="covid.html">What is it?</a>
@@ -124,17 +120,16 @@
 
         <table id="countries_stat">
                 <tr>
-                  
-                    <th onclick="sortTable(0)">County</th>
-                    <th onclick="sortTable(1)">Positive</th>
-                    <th>New Positive</th>
-                    <th>Deaths</th>
-                    <th>New Deaths</th>
-                    <th>Critical</th>
-                    <th>Recovered</th>
-                    <th>Cases per Million</th>
 
-                   
+                    <th onclick="sortTable(0)">County</th>
+                    <th onclick="sortTableNumbers(1)">Positive</th>
+                    <th>New Positive</th>
+                    <th onclick="sortTableNumbers(2)">Deaths</th>
+                    <th onclick="sortTableNumbers(3)">New Deaths</th>
+                    <th onclick="sortTableNumbers(4)">Critical</th>
+                    <th onclick="sortTableNumbers(5)">Recovered</th>
+                    <th onclick="sortTableNumbers(6)">Cases per Million</th>
+
         
                 </tr>
             </table>
@@ -145,6 +140,47 @@
 
 
     <script src='main.js'></script>
+
+
+<script>
+
+
+function sortTableNumbers() {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("countries_stat");
+    switching = true;
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[0];
+        y = rows[i + 1].getElementsByTagName("TD")[0];
+        //check if the two rows should switch place:
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+</script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

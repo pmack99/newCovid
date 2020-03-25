@@ -5,7 +5,8 @@ let total_death = document.getElementById("total_death");
 let total_recovered = document.getElementById("total_recovered");
 let total_cases = document.getElementById("total_cases");
 let statistic_taken_at = document.getElementById("statistic_taken_at");
-let table = document.getElementById('countries_stat')
+let table = document.getElementById('usa')
+
 
 // Fetching the Data from the server
 
@@ -41,10 +42,10 @@ fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.p
 })
 .then(response => response.json().then(data =>{
     console.log(data)
-    let countries_stat = data.countries_stat;
+    let usa = data.usa;
 //Getting all the country statistic using a loop
-    for(let i = 0; i<countries_stat.length;i++){
-        console.log(countries_stat[i]);
+    for(let i = 0; i<usa.length;i++){
+        console.log(usa[i]);
         //we will start by inserting the new rows inside our table
         let row = table.insertRow(i+1);
         let country_name = row.insertCell(0);
@@ -56,14 +57,14 @@ fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.p
         let recovered_per_country = row.insertCell(6);
         let total_cases_per_1m_population = row.insertCell(7);
 
-        country_name.innerHTML = countries_stat[i].country_name;
-        cases.innerHTML = countries_stat[i].cases;
-        new_cases.innerHTML = countries_stat[i].new_cases;
-        deaths.innerHTML = countries_stat[i].deaths;
-        new_deaths.innerHTML = countries_stat[i].new_deaths;
-        serious_critical.innerHTML = countries_stat[i].serious_critical;
-        recovered_per_country.innerHTML = countries_stat[i].total_recovered;
-        total_cases_per_1m_population.innerHTML = countries_stat[i].total_cases_per_1m_population;
+        country_name.innerHTML = usa[i].country_name;
+        cases.innerHTML = usa[i].cases;
+        new_cases.innerHTML = usa[i].new_cases;
+        deaths.innerHTML = usa[i].deaths;
+        new_deaths.innerHTML = usa[i].new_deaths;
+        serious_critical.innerHTML = usa[i].serious_critical;
+        recovered_per_country.innerHTML = usa[i].total_recovered;
+        total_cases_per_1m_population.innerHTML = usa[i].total_cases_per_1m_population;
 
     }
 }))
@@ -73,5 +74,3 @@ fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.p
 
 
 });
-
-
