@@ -108,7 +108,9 @@ body{
   }
 
   .chart{
-    padding-top: 50px;
+    padding: 20px;
+    padding-top: 100px;
+    margin-top: auto;
   }
 
 

@@ -62,13 +62,26 @@
        
 
 <div class="jumbotron jumbotron-fluid">
-<h1 class="a text-danger">USA Total by Date</h1>
+<h1 class="a text-danger">Covid charts by Date</h1>
 
     <div class="chart container">
         <canvas id="myChart"></canvas>
-       
-       </div>
 
+       </div>
+          
+       
+</div>
+
+<hr>
+
+<div class="jumbotron jumbotron-fluid">
+
+<div class="chart container">
+
+    <canvas id="flChart"></canvas>
+   </div>
+   
+</div>
 
 </div>
 
@@ -83,7 +96,7 @@
         Chart.defaults.global.defaultFontSize = 18 ;
         Chart.defaults.global.defaultFontColor = 'white';
     
-        let massPopChart = new Chart(myChart, {
+        let usaChart = new Chart(myChart, {
           type: 'bar',
              data:{
              labels:['3/4', '3/5', '3/6', '3/7', '3/8','3/9', '3/10', '3/11', '3/12','3/13', '3/14', '3/15', '3/16', '3/17','3/18', '3/19', '3/20', '3/21', '3/22' , '3/23', '3/24', '3/25', '3/26'],
@@ -172,6 +185,109 @@
         });
     
         </script>
+
+<script>
+
+    let flChart = document.getElementById('flChart').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18 ;
+    Chart.defaults.global.defaultFontColor = 'white';
+
+    let newChart = new Chart(flChart, {
+      type: 'bar',
+         data:{
+         labels:['3/4', '3/5', '3/6', '3/7', '3/8','3/9', '3/10', '3/11', '3/12','3/13', '3/14', '3/15', '3/16', '3/17','3/18', '3/19', '3/20', '3/21', '3/22' , '3/23', '3/24', '3/25', '3/26'],
+         datasets:[{
+             label: 'Positive',
+             data: [
+
+                2,
+                9,
+                9,
+                14,
+                17,
+                18,
+                19,
+                28,
+                32,
+                50,
+                77,
+                116,
+                141,
+                186,
+                314,
+                390,
+                520,
+                658,
+                830,
+                1171,
+                1412,
+                1682,
+                2355
+             ],
+
+             backgroundColor: 'grey',
+             borderWidth:1,
+             borderColor:'grey',
+             hoverBorderWidth:'3',
+             hoverBorderColor:'black"'
+
+            }, {
+
+                label: 'Deaths',
+                data: [
+
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    2,
+                    3,
+                    4,
+                    6,
+                    7,
+                    8,
+                    10,
+                    12,
+                    13,
+                    14,
+                    18,
+                    22,
+                    28
+                    ],
+                    type: 'line',
+
+             backgroundColor: 'red',
+             borderWidth:1,
+             borderColor:'grey',
+             hoverBorderWidth:'3',
+             hoverBorderColor:'black"'
+         }],
+        },
+        options: {
+            title: {
+                display:true,
+                text: 'FL positive COVID-19 cases',
+                fontSize:25 
+            }
+        }
+
+
+    });
+
+    </script>
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
