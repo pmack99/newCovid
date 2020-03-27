@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='new.css'>
+    <script src= https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald|Poppins&display=swap" rel="stylesheet"> 
@@ -27,9 +28,9 @@
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="usaDailyChart.html">Charts</a>
-                    </li>
-                    
+                        <a class="nav-link" href="usaDailyChart.html">Charts</a>
+                      </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="usaDaily.html">US Daily</a>
                       </li>
@@ -58,32 +59,119 @@
                 </div>
               </nav>
 
-             
+       
 
 <div class="jumbotron jumbotron-fluid">
+<h1 class="a text-danger">USA Total by Date</h1>
 
-  <h1 class="a text-danger">USA Total by Date - COVID-19 Data</h1>
-  <hr>   
+    <div class="chart container">
+        <canvas id="myChart"></canvas>
+       
+       </div>
 
-                <table class="t table">
-            
-                    <table id="usa">
-                            <tr>
-                                <th>Date</th>
-                                <th>Positive</th>
-                                <th>Negative</th>
-                                <th>Pending</th>
-                                <th>Hospitalized</th>
-                                <th>Deaths</th>
-                                <th>Total Tests</th>
-                                
-                            </tr>
-                        </table>
-                     
-                    </div>
- </div>
+
+</div>
+
+
 
     <script src='statesdaily.js'></script>
+    <script>
+
+        let myChart = document.getElementById('myChart').getContext('2d');
+    
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18 ;
+        Chart.defaults.global.defaultFontColor = 'white';
+    
+        let massPopChart = new Chart(myChart, {
+          type: 'bar',
+             data:{
+             labels:['3/4', '3/5', '3/6', '3/7', '3/8','3/9', '3/10', '3/11', '3/12','3/13', '3/14', '3/15', '3/16', '3/17','3/18', '3/19', '3/20', '3/21', '3/22' , '3/23', '3/24', '3/25', '3/26'],
+             datasets:[{
+                 label: 'Positive',
+                 data: [
+    
+                    118,
+                    176,
+                    223,
+                    341,
+                    417,
+                    584,
+                    778,
+                    1053,
+                    1315,
+                    1922,
+                    2450,
+                    3173,
+                    4019,
+                    5723,
+                    7730,
+                    11719,
+                    17033,
+                    23197,
+                    31879,
+                    42152,
+                    51954,
+                    63928,
+                    80735
+                 ],
+
+                 backgroundColor: 'grey',
+                 borderWidth:1,
+                 borderColor:'grey',
+                 hoverBorderWidth:'3',
+                 hoverBorderColor:'black"'
+    
+                }, {
+    
+                    label: 'Deaths',
+                    data: [
+    
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        27,
+                        36,
+                        39,
+                        49,
+                        60,
+                        71,
+                        90,
+                        112,
+                        160,
+                        219,
+                        272,
+                        398,
+                        471,
+                        675,
+                        900,
+                        1163
+                        ],
+                        type: 'line',
+    
+                 backgroundColor: 'red',
+                 borderWidth:1,
+                 borderColor:'grey',
+                 hoverBorderWidth:'3',
+                 hoverBorderColor:'black"'
+             }],
+            },
+            options: {
+                title: {
+                    display:true,
+                    text: 'USA positive COVID-19 cases',
+                    fontSize:25 
+                }
+            }
+    
+    
+        });
+    
+        </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
