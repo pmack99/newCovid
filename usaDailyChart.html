@@ -85,6 +85,19 @@
 
 </div>
 
+<hr>
+
+<div class="jumbotron jumbotron-fluid">
+
+<div class="chart container">
+
+    <canvas id="nyChart"></canvas>
+   </div>
+   
+</div>
+
+</div>
+
 
  <!-- USA chart JS and data -->
     <script src='statesdaily.js'></script>
@@ -169,16 +182,17 @@
                         type: 'line',
     
                  backgroundColor: 'red',
-                 borderWidth:1,
-                 borderColor:'grey',
+                 borderWidth:3,
+                 borderColor:'white',
                  hoverBorderWidth:'3',
-                 hoverBorderColor:'black"'
+                 hoverBorderColor:'black'
+                 
              }],
             },
             options: {
                 title: {
                     display:true,
-                    text: 'USA positive COVID-19 cases',
+                    text: 'USA COVID-19 cases',
                     fontSize:25 
                 }
             }
@@ -271,8 +285,8 @@
                     type: 'line',
 
              backgroundColor: 'red',
-             borderWidth:1,
-             borderColor:'grey',
+             borderWidth:3,
+             borderColor:'white',
              hoverBorderWidth:'3',
              hoverBorderColor:'black"'
          }],
@@ -280,7 +294,7 @@
         options: {
             title: {
                 display:true,
-                text: 'FL positive COVID-19 cases',
+                text: 'FL COVID-19 cases',
                 fontSize:25 
             }
         }
@@ -289,6 +303,108 @@
     });
 
     </script>
+
+     <!-- NY chart JS and data -->
+<script>
+
+    let nyChart = document.getElementById('nyChart').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18 ;
+    Chart.defaults.global.defaultFontColor = 'white';
+
+    let newChart2 = new Chart(nyChart, {
+      type: 'bar',
+         data:{
+         labels:['3/4', '3/5', '3/6', '3/7', '3/8','3/9', '3/10', '3/11', '3/12','3/13', '3/14', '3/15', '3/16', '3/17','3/18', '3/19', '3/20', '3/21', '3/22' , '3/23', '3/24', '3/25', '3/26', '3/27'],
+         datasets:[{
+             label: 'Positive',
+             data: [
+
+                6,
+                22,
+                33,
+                76,
+                105,
+                142,
+                173,
+                216,
+                216,
+                421,
+                524,
+                729,
+                950,
+                1700,
+                2382,
+                4152,
+                7102,
+                10356,
+                15168,
+                20875,
+                25665,
+                30811,
+                37258,
+                44635
+             ],
+
+             backgroundColor: 'grey',
+             borderWidth:1,
+             borderColor:'grey',
+             hoverBorderWidth:'3',
+             hoverBorderColor:'black"'
+
+            }, {
+
+                label: 'Deaths',
+                data: [
+
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    7,
+                    7,
+                    12,
+                    12,
+                    35,
+                    44,
+                    114,
+                    114,
+                    210,
+                    285,
+                    385,
+                    519
+                    ],
+                    type: 'line',
+
+             backgroundColor: 'red',
+             borderWidth:3,
+             borderColor:'white',
+             hoverBorderWidth:'3',
+             hoverBorderColor:'black"'
+         }],
+        },
+        options: {
+            title: {
+                display:true,
+                text: 'NY COVID-19 cases',
+                fontSize:25 
+            }
+        }
+
+
+    });
+
+    </script>
+
 
 
 
