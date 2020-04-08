@@ -1,0 +1,117 @@
+
+*{
+    margin: 10;
+    padding: 10;
+    outline: 0;
+    font-family: 'Nunito',sans-serif;
+}
+
+
+
+.jumbotron{
+
+    padding:50px 40px 50px 40px;
+    margin-top: 1rem;
+    margin-bottom:5rem;
+    font-family: 'Oswald', sans-serif;
+    background-color: WHITE;
+    border-radius: 1rem;
+  
+  }
+
+
+#countries_stat td, #usa td, #usa th {
+    
+    padding: 10px;
+    
+  }
+  
+  #countries_stat tr:hover {background-color: red;}
+  
+  #countries_stat th {
+    padding-top: .3rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    color: black;
+    text-align: center;
+    height: 40px;
+  }
+
+
+  #countries_stat tr{
+
+    height: 50px;
+
+  }
+
+  #usa tr{
+
+    height: 20px;
+
+  }
+
+
+  #usa tr:hover {background-color: red;}
+  
+  #usa th {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color:black;
+    color: red;
+    text-align: center;
+    height: 40px;
+  }
+
+
+  table {
+    width: 100%;
+    
+  }
+
+
+  .card-deck {
+    color: black;
+    
+  }
+
+  .a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    margin-top: 2rem;
+  }
+
+
+  hr {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-style: inset;
+    border-width: 1px;
+  }
+  
+  .c {
+    background: none;
+    border-radius: 1rem;
+    border-color: tomato;
+
+  }
+
+  .chart{
+    padding: 20px;
+    padding-top: 100px;
+    margin-top: auto;
+  }
+
+ h5 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    
+  }
+
+  p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+  }
